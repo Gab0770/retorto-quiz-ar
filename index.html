@@ -20,14 +20,20 @@
 </head>
 <body>
   <!-- la scena AR -->
-  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: true; patternRatio: 0.8;">
-    <!-- marker -->
-    <a-marker type="pattern" url="pattern-sottobicchiere-marker.patt" id="marker">
-      <!-- esempio: un semplice cubo virtuale sopra il sottobicchiere -->
-      <a-box position="0 0.5 0" rotation="0 45 0" color="#ff0033"></a-box>
-    </a-marker>
-    <a-entity camera></a-entity>
-  </a-scene>
+  <a-scene embedded
+         arjs="sourceType: webcam;
+               debugUIEnabled: true;
+               patternRatio: 0.8;">
+  <!-- marker custom -->
+  <a-marker type="pattern"
+            url="pattern-sottobicchiere-marker.patt"
+            id="marker">
+    <a-box position="0 0.5 0"
+           rotation="0 45 0"
+           color="#ff0033"></a-box>
+  </a-marker>
+  <a-entity camera></a-entity>
+</a-scene>
 
   <!-- overlay HTML per il quiz -->
   <div class="quiz-ui" id="quizUI">
